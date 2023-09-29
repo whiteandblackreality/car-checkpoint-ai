@@ -23,7 +23,7 @@
 
 ## Структура БД
 
-<img src="assets/Car-Checkpoint-AI DB Structure.png" alt="Логическая схема БД">
+<img src="assets/Car-Checkpoint-AI DB Structure v0.1.4.png" alt="Логическая схема БД">
 
 ## Структура S3
 
