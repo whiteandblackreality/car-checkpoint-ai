@@ -115,7 +115,7 @@
 
 ### 4.1. Архитектура решения
 
-<img src="assets/Car-Checkpoint-AI Architecture.png" alt="Архитектура системы">
+<img src="assets/Car-Checkpoint-AI Architecture v0.1.0.png" alt="Архитектура системы">
 
 **Сервисы (инструменты):**
 

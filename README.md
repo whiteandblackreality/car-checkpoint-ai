@@ -10,15 +10,14 @@
 
 Архитектура системы выглядит следующим образом: 
 
-<img src="assets/Car-Checkpoint-AI Architecture.png" alt="Архитектура системы">
+<img src="assets/Car-Checkpoint-AI Architecture v0.1.2.png" alt="Архитектура системы">
 
 ## Структура проекта
 ```
 .
 ├── app                 # Web-приложение системы (back + front)
 ├── db_repository       # Сервис-репозиторий для общения с PostgreSQL
-├── video_getter        # Микросервис получения видео потока
-├── frames_processing   # Микросервис обработки видеопотока, извлечение кадров
+├── frames_getter       # Микросервис получения кадров из видео потока
 └── models_adapter      # Микросервис для общения с Triton Server
 ```
 
