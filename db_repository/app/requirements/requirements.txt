@@ -1,0 +1,7 @@
+# App
+fastapi==0.94.1
+uvicorn==0.21.1
+sqlalchemy==1.4.35
+uvicorn[standard]
+python-dotenv==1.0.0
+psycopg2
