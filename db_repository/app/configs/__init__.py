@@ -4,7 +4,7 @@ from typing import Dict
 
 from pydantic import BaseSettings
 from dotenv import dotenv_values
-from configs.exceptions import *
+from app.configs.exceptions import *
 
 
 @lru_cache

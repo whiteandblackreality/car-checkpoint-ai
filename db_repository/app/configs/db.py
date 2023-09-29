@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-from configs import get_environment_variables
-from configs.exceptions import *
+from app.configs import get_environment_variables
+from app.configs.exceptions import *
 
 env = get_environment_variables()
 
