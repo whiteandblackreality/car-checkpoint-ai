@@ -21,3 +21,15 @@
 ├── frames_processing   # Микросервис обработки видеопотока, извлечение кадров
 └── models_adapter      # Микросервис для общения с Triton Server
 ```
+
+## Структура БД
+
+<img src="assets/Car-Checkpoint-AI DB Structure.png" alt="Логическая схема БД">
+
+## Структура S3
+
+<img src="assets/Car-Checkpoint-AI S3 Structure.png" alt="Структура S3">
+
+## Общий пайплайн обработки
+
+<img src="assets/Car-Checkpoint-AI Pipeline.png" alt="Пайплайн работы">
