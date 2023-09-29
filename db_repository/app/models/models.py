@@ -60,6 +60,7 @@ class Cameras(EntityMeta):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     place = Column(String, nullable=False)
     about = Column(String, nullable=True)
+    link = Column(String, nullable=False)
     created_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     entries = relationship('Entries', back_populates="cameras")
