@@ -70,5 +70,6 @@ class Cameras(EntityMeta):
             "id": self.id.__str__(),
             "place": self.place.__str__(),
             "about": self.about.__str__(),
+            "link": self.link.__str__(),
             "created_at": self.created_at.__str__(),
         }
