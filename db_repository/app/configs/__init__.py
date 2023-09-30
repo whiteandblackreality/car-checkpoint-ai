@@ -14,6 +14,8 @@ def load_env() -> None:
         env_dict = dict(dotenv_values(env))
         for key in env_dict.keys():
             os.environ[key] = env_dict[key]
+    elif os.environ.get('OS_CONFIGS'):
+        pass
     else:
         raise ConfigLoadDotenvError('Invalid env`s path')
 

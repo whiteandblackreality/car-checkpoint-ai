@@ -3,61 +3,61 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, status, HTTPException
 
 from schemas.schemas import *
-from services.cars_service import CarsService
+from services.cameras_service import CamerasService
 
 
-CarsRouter = APIRouter(
-    prefix="/v1/cars", tags=["cars"]
+CamerasRouter = APIRouter(
+    prefix="/v1/cameras", tags=["cameras"]
 )
 
 
-@CarsRouter.get("/", response_model=List[CarResponse])
+@CamerasRouter.get("/", response_model=List[CameraResponse])
 def index(
     pageSize: Optional[int] = 100,
     startIndex: Optional[int] = 0,
-    cars_service: CarsService = Depends(),
+    cameras_service: CamerasService = Depends(),
 ):
     return [
-        car.normalize()
-        for car in cars_service.list(
+        camera.normalize()
+        for camera in cameras_service.list(
             pageSize, startIndex
         )
     ]
 
 
-@CarsRouter.get("/{id}", response_model=CarResponse)
-def get(id: int, cars_service: CarsService = Depends()):
+@CamerasRouter.get("/{id}", response_model=CameraResponse)
+def get(id: int, cameras_service: CamerasService = Depends()):
     try:
-        return cars_service.get(id).normalize()
+        return cameras_service.get(id).normalize()
     except AttributeError:
-        raise HTTPException(status_code=404, detail=f"Car with ID {id} is not found")
+        raise HTTPException(status_code=404, detail=f"Camera with ID {id} is not found")
 
 
-@CarsRouter.post(
+@CamerasRouter.post(
     "/",
-    response_model=CarResponse,
+    response_model=CameraResponse,
     status_code=status.HTTP_201_CREATED,
 )
 def create(
-    car: CarPayload,
-    cars_service: CarsService = Depends(),
+    camera: CameraPayload,
+    cameras_service: CamerasService = Depends(),
 ):
-    return cars_service.create(car).normalize()
+    return cameras_service.create(camera).normalize()
 
 
-@CarsRouter.patch("/{id}", response_model=CarResponse)
+@CamerasRouter.patch("/{id}", response_model=CameraResponse)
 def update(
     id: int,
-    car: CarPayload,
-    cars_service: CarsService = Depends(),
+    camera: CameraPayload,
+    cameras_service: CamerasService = Depends(),
 ):
-    return cars_service.update(id, car).normalize()
+    return cameras_service.update(id, camera).normalize()
 
 
-@CarsRouter.delete(
+@CamerasRouter.delete(
     "/{id}", status_code=status.HTTP_204_NO_CONTENT
 )
 def delete(
-    id: int, cars_service: CarsService = Depends()
+    id: int, cameras_service: CamerasService = Depends()
 ):
-    return cars_service.delete(id)
+    return cameras_service.delete(id)
