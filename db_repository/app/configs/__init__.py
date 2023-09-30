@@ -8,7 +8,7 @@ from app.configs.exceptions import *
 
 
 @lru_cache
-def load_env() -> Dict:
+def load_env() -> None:
     env = os.environ.get('PATH_TO_ENV')
     if os.path.isfile(env):
         env_dict = dict(dotenv_values(env))
