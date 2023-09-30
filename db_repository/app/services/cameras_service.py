@@ -1,10 +1,10 @@
 from typing import List, Optional
 
 from fastapi import Depends
-from models.models import Cameras
+from app.models.models import Cameras
 
-from repositories.cameras_repository import CamerasRepository
-from schemas.schemas import CameraPayload
+from app.repositories.cameras_repository import CamerasRepository
+from app.schemas.schemas import CameraPayload
 
 
 class CamerasService:

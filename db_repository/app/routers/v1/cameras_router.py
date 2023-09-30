@@ -2,8 +2,8 @@ from typing import List, Optional
 
 from fastapi import APIRouter, Depends, status, HTTPException
 
-from schemas.schemas import *
-from services.cameras_service import CamerasService
+from app.schemas.schemas import *
+from app.services.cameras_service import CamerasService
 
 
 CamerasRouter = APIRouter(

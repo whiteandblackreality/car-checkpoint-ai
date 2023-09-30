@@ -2,8 +2,8 @@ from typing import List, Optional
 
 from fastapi import APIRouter, Depends, status, HTTPException
 
-from schemas.schemas import *
-from services.cars_service import CarsService
+from app.schemas.schemas import *
+from app.services.cars_service import CarsService
 
 
 CarsRouter = APIRouter(

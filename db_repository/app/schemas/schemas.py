@@ -1,4 +1,4 @@
-from schemas import CarBase, EntryBase, CameraBase
+from app.schemas import CarBase, EntryBase, CameraBase
 
 
 class CarPayload(CarBase):

@@ -1,10 +1,10 @@
 from typing import List, Optional
 
 from fastapi import Depends
-from models.models import Cars
+from app.models.models import Cars
 
-from repositories.cars_repository import CarsRepository
-from schemas.schemas import CarPayload
+from app.repositories.cars_repository import CarsRepository
+from app.schemas.schemas import CarPayload
 
 
 class CarsService:

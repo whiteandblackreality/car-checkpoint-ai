@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 
-from configs import get_environment_variables
-from metadata.tags import Tags
-from models import init
-from routers.v1.cars_router import CarsRouter
-from routers.v1.entries_router import EntriesRouter
-from routers.v1.cameras_router import CamerasRouter
+from app.configs import get_environment_variables
+from app.metadata.tags import Tags
+from app.models import init
+from app.routers.v1.cars_router import CarsRouter
+from app.routers.v1.entries_router import EntriesRouter
+from app.routers.v1.cameras_router import CamerasRouter
 
 env = get_environment_variables()
 

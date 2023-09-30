@@ -3,10 +3,10 @@ from typing import List, Optional
 from fastapi import Depends
 from sqlalchemy.orm import Session, lazyload
 
-from configs.db import (
+from app.configs.db import (
     get_db_connection,
 )
-from models.models import Entries
+from app.models.models import Entries
 
 
 class EntriesRepository:

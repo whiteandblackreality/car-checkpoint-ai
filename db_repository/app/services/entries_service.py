@@ -1,10 +1,10 @@
 from typing import List, Optional
 
 from fastapi import Depends
-from models.models import Entries
+from app.models.models import Entries
 
-from repositories.entries_repository import EntriesRepository
-from schemas.schemas import EntryPayload
+from app.repositories.entries_repository import EntriesRepository
+from app.schemas.schemas import EntryPayload
 
 
 class EntriesService:
