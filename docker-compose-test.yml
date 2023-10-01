@@ -15,11 +15,11 @@ services:
       - API_VERSION=0.1.0
       - APP_NAME=db-repository
       - DATABASE_DIALECT=postgresql
-      - DATABASE_HOSTNAME=postgres
-      - DATABASE_NAME=car_checkpoint
-      - DATABASE_PASSWORD=postgres
+      - DATABASE_HOSTNAME=localhost
+      - DATABASE_NAME=demo_db
+      - DATABASE_PASSWORD=password_123
       - DATABASE_PORT=5432
-      - DATABASE_USERNAME=postgres
+      - DATABASE_USERNAME=user_demo
       - DEBUG_MODE=True
       - DATABASE_SCHEMA=car_checkpoint
       - OS_CONFIGS=True
