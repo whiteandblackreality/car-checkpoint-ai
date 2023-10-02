@@ -11,9 +11,6 @@ try:
                    f"@{env.DATABASE_HOSTNAME}:{env.DATABASE_PORT}/{env.DATABASE_NAME}" \
                    f"?options=-c%20search_path={env.DATABASE_SCHEMA}"
 
-    from app.logger import logger
-    logger.info(DATABASE_URL)
-
     Engine = create_engine(
         DATABASE_URL, echo=env.DEBUG_MODE, future=True
     )
