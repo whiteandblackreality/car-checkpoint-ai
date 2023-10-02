@@ -1,5 +1,5 @@
-.idea
-.venv
+.idea/
+.venv/
 
-./docker-compose-test.yml
-./docker-compose.yml
+docker-compose-test.yml
+docker-compose.yml
