@@ -32,3 +32,7 @@
 ## Общий пайплайн обработки
 
 <img src="assets/Car-Checkpoint-AI Pipeline.png" alt="Пайплайн работы">
+
+## Порты (dev)
+- 8679 (db-repository)
+- 8683 (WebRTC)
