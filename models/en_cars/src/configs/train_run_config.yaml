@@ -1,0 +1,3 @@
+model_config: '../configs/model_configs/cars_model_config.yml'
+data_config: '../configs/data_configs/cars_data_config.yaml'
+train_config: '../configs/train_configs/cars_verification_train_config.yml'

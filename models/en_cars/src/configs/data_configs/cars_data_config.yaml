@@ -1,0 +1,33 @@
+train_data:
+  dataset_name: 'cars_dataset'
+  dataset_params:
+    root_path: '../../data/Train'
+    df_path: '../../data/train.csv'
+    sample_type: 'train'
+    transform:
+      resize:
+        resize_shape: 512
+      h_flip:
+        p: 0.3
+      rotation:
+        p: 0.3
+        degrees: 15
+    imgaug_cutout: True
+
+
+val_data:
+  dataset_name: 'cars_dataset'
+  dataset_params:
+    root_path: '../../data/Val'
+    df_path: '../../data/val.csv'
+    sample_type: 'val'
+    transform:
+      resize:
+        resize_shape: 512
+    imgaug_cutout: False
+
+val_pairs_data:
+  easy_val: '../../data/easy_val_pairs.csv'
+  normal_val: '../../data/normal_val_pairs.csv'
+  hard_val: '../../data/hard_val_pairs.csv'
+

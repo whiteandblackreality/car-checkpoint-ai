@@ -1,0 +1,12 @@
+model_name: 'cars_model'
+model_save_path: '../../model_weights'
+model_save_name: 'tf_efficientnet_b5_v1'
+model_parameters:
+  emb_size: 512
+  weights: ''
+  gpus: [6]
+  cars_model_parameters:
+    backbone_name: 'tf_efficientnet_b5'
+    emb_size: 512
+    scale: 12
+    margin: 0.5

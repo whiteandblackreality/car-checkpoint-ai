@@ -1,0 +1,22 @@
+optimizer:
+  name: 'AdamW'
+  parameters:
+    lr: 0.0002
+    weight_decay: 0.00001
+criterion:
+  name: 'Focal'
+  parameters:
+    gamma: 2
+scheduler:
+  name: 'OneCycle'
+  parameters:
+    max_lr: 0.0003
+    pct_start: 0.1
+    anneal_strategy: 'cos'
+    base_momentum: 0.85
+    max_momentum: 0.9
+num_epochs: 20
+train_batch: 16
+val_batch: 64
+num_workers: 8
+logs_save_path: '../../logs'
