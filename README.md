@@ -1,4 +1,4 @@
-# Car-Checkpoint-AI v0.2.0
+# Car-Checkpoint-AI v0.3.0
 
 **Car-Checkpoint-AI** - Это система, позволяющая автоматизировать контроль автомобилей при проезде КПП 
 
