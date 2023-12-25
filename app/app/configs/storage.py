@@ -8,16 +8,21 @@ env = get_environment_variables()
 
 
 class VideosStorage:
-    def __init__(self, path_to_storage):
+    def __init__(self,
+                 path_to_storage,
+                 db_repository_endpoint):
         os.makedirs(path_to_storage, exist_ok=True)
         self.path_to_storage = path_to_storage
+
+        self.db_repository_endpoint = db_repository_endpoint
 
     def get_path(self):
         return self.path_to_storage
 
 
 try:
-    VIDEOS_STORAGE = VideosStorage(path_to_storage=env.PATH_TO_STORAGE)
+    VIDEOS_STORAGE = VideosStorage(path_to_storage=env.PATH_TO_STORAGE,
+                                   db_repository_endpoint=env.DB_REPOSITORY_ENDPOINT)
     logger.info(f'Videos will be saved to {env.PATH_TO_STORAGE}')
 
 except Exception as e:

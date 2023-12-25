@@ -25,6 +25,7 @@ class EnvironmentSettings(BaseSettings):
     APP_NAME: str
     PATH_TO_STORAGE: str
     DEBUG_MODE: bool
+    DB_REPOSITORY_ENDPOINT: str
 
     class Config:
         load_env()
