@@ -1,6 +1,7 @@
 from functools import lru_cache
 import os
-from typing import Dict
+import random
+import string
 
 from pydantic import BaseSettings
 from dotenv import dotenv_values
@@ -35,3 +36,9 @@ class EnvironmentSettings(BaseSettings):
 @lru_cache
 def get_environment_variables():
     return EnvironmentSettings()
+
+
+def get_random_string(length):
+    letters = string.ascii_lowercase
+    result_str = ''.join(random.choice(letters) for _ in range(length))
+    return result_str

@@ -7,4 +7,13 @@ class VideoPayload(VideoBase):
 
 class VideoResponse(VideoBase):
     id: int
-    created_at: st
+    created_at: str
+
+
+class FramePayload(FrameBase):
+    pass
+
+
+class FrameResponse(FrameBase):
+    id: int
+    created_at: str

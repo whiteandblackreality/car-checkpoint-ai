@@ -5,6 +5,5 @@ sqlalchemy==1.4.35
 uvicorn[standard]
 python-dotenv==1.0.0
 psycopg2
-# Tests
-pytest==7.1.2
-pytest-cov==3.0.0
+requests==2.31.0
+python-multipart

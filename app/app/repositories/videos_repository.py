@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session, lazyload
 from app.configs.storage import (
     get_storage_connection, VideosStorage
 )
-from app.schemas.schemas import VideoPayload, VideoResponse
+from app.schemas.schemas import VideoPayload, VideoResponse, FrameResponse
 
 
 class VideosRepository:
@@ -17,5 +17,8 @@ class VideosRepository:
     ) -> None:
         self.storage = storage
 
-    def create(self, video: VideoPayload) -> VideoResponse:
-        return self.storage.create_video_in_db(video.video_path)
+    def create(self, video_path: str ) -> VideoResponse:
+        return self.storage.create_video_in_db(video_path)
+
+    def get_answers(self, video_id: int) -> List[FrameResponse]:
+        return self.storage.get_frames(video_id)

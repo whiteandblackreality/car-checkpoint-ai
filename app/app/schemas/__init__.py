@@ -7,3 +7,13 @@ class VideoBase(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class FrameBase(BaseModel):
+    base64_frame: Optional[str]
+    video_id: Optional[int]
+    car_number: Optional[str]
+    car_model: Optional[str]
+
+    class Config:
+        orm_mode = True

@@ -28,6 +28,9 @@ class VideosStorage:
                              data=json.dumps({'video_path': path_to_video}),
                              headers=self._headers).json()
 
+    def get_frames(self, video_id):
+        return requests.get(url=f'{self.db_repository_endpoint}/v1/videos/frames_by_video_id/{video_id}').json()
+
 
 
 try:
