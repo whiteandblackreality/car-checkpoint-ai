@@ -1,25 +1,19 @@
-from app.schemas import CarBase, EntryBase, CameraBase
+from app.schemas import VideoBase, FrameBase
 
 
-class CarPayload(CarBase):
-    pass
+class VideoPayload(VideoBase):
+    created_at: str
 
 
-class CarResponse(CarBase):
+class VideoResponse(VideoBase):
     id: int
+    created_at: str
 
 
-class EntryPayload(EntryBase):
-    pass
+class FramePayload(FrameBase):
+    created_at: str
 
 
-class EntryResponse(EntryBase):
+class FrameResponse(FrameBase):
     id: int
-
-
-class CameraPayload(CameraBase):
-    pass
-
-
-class CameraResponse(CameraBase):
-    id: int
+    created_at: str
