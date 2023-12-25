@@ -45,7 +45,7 @@ def create(
     return videos_service.create(video).normalize()
 
 
-@VideosRouter.get("frames_by_video_id/{id}", response_model=List[FrameResponse])
+@VideosRouter.get("/frames_by_video_id/{id}", response_model=List[FrameResponse])
 def get(id: int, videos_service: VideosService = Depends()):
     try:
         return [frame.normalize() for frame in videos_service.get_frames_by_video_id(id)]

@@ -7,16 +7,15 @@ from app.routers.v1.frames_router import FramesRouter
 from app.routers.v1.videos_router import VideosRouter
 
 
-if __name__ == '__main__':
-    env = get_environment_variables()
+env = get_environment_variables()
 
-    app = FastAPI(
-        title=env.APP_NAME,
-        version=env.API_VERSION,
-        openapi_tags=Tags,
-    )
+app = FastAPI(
+    title=env.APP_NAME,
+    version=env.API_VERSION,
+    openapi_tags=Tags,
+)
 
-    app.include_router(FramesRouter)
-    app.include_router(VideosRouter)
+app.include_router(FramesRouter)
+app.include_router(VideosRouter)
 
-    init()
+init()

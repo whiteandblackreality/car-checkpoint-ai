@@ -2,7 +2,7 @@ from app.schemas import VideoBase, FrameBase
 
 
 class VideoPayload(VideoBase):
-    created_at: str
+    pass
 
 
 class VideoResponse(VideoBase):
@@ -11,7 +11,7 @@ class VideoResponse(VideoBase):
 
 
 class FramePayload(FrameBase):
-    created_at: str
+    pass
 
 
 class FrameResponse(FrameBase):

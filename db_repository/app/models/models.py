@@ -37,6 +37,7 @@ class Frames(EntityMeta):
     def normalize(self):
         return {
             "id": self.id.__str__(),
+            "base64_frame": self.base64_frame.__str__(),
             "video_id": self.video_id.__str__(),
             "car_number": self.car_number.__str__(),
             "car_model": self.car_model.__str__(),

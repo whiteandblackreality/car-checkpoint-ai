@@ -3,7 +3,7 @@ from typing import Generic, List, TypeVar
 
 from sqlalchemy.exc import PendingRollbackError
 
-from configs.db import get_db_connection
+from app.configs.db import get_db_connection
 
 M = TypeVar("M")
 

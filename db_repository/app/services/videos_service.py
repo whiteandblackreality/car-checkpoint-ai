@@ -17,7 +17,7 @@ class VideosService:
 
     def create(self, video_body: VideoPayload) -> Videos:
         return self.videos_repository.create(
-            Videos(video_path=video_body.place,)
+            Videos(video_path=video_body.video_path,)
         )
 
     def get(self, video_id: int) -> Videos:

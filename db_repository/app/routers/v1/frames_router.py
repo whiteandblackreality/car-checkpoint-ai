@@ -1,6 +1,7 @@
 from typing import List, Optional
 
 from fastapi import APIRouter, Depends, status, HTTPException
+import sqlalchemy
 
 from app.schemas.schemas import *
 from app.services.frames_service import FramesService
@@ -42,4 +43,7 @@ def create(
     frame: FramePayload,
     frames_service: FramesService = Depends(),
 ):
-    return frames_service.create(frame).normalize()
+    try:
+        return frames_service.create(frame).normalize()
+    except sqlalchemy.exc.IntegrityError:
+        raise HTTPException(status_code=404, detail=f"Video with ID {frame.video_id} is not found")
