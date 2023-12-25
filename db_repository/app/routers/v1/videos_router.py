@@ -45,15 +45,6 @@ def create(
     return videos_service.create(video).normalize()
 
 
-@VideosRouter.patch("/{id}", response_model=VideoResponse)
-def update(
-    id: int,
-    video: VideoPayload,
-    videos_service: VideosService = Depends(),
-):
-    return videos_service.update(id, video).normalize()
-
-
 @VideosRouter.get("frames_by_video_id/{id}", response_model=List[FrameResponse])
 def get(id: int, videos_service: VideosService = Depends()):
     try:
