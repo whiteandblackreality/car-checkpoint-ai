@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 from fastapi import Depends
-from app.models.models import Videos
+from app.models.models import Videos, Frames
 
 from app.repositories.videos_repository import VideosRepository
 from app.schemas.schemas import VideoPayload
@@ -40,3 +40,10 @@ class VideosService:
         return self.videos_repository.update(
             video_id, Videos(video_path=video_body.place,)
         )
+
+    def get_frames_by_video_id(
+            self, video_id: int
+    ) -> List[Frames]:
+        return self.videos_repository.get(
+            Videos(id=video_id)
+        ).frames

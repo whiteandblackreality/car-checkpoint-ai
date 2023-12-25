@@ -3,7 +3,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, status, HTTPException
 
 from app.schemas.schemas import *
-from app.services.entries_service import EntriesService
+from app.services.frames_service import EntriesService
 
 
 EntriesRouter = APIRouter(
@@ -52,12 +52,3 @@ def update(
     entries_service: EntriesService = Depends(),
 ):
     return entries_service.update(id, entry).normalize()
-
-
-@EntriesRouter.delete(
-    "/{id}", status_code=status.HTTP_204_NO_CONTENT
-)
-def delete(
-    id: int, entries_service: EntriesService = Depends()
-):
-    return entries_service.delete(id)
