@@ -1,8 +1,11 @@
 import os
+import json
+import requests
 
 from app.configs import get_environment_variables
 from app.configs.exceptions import *
 from app.logger import logger
+from app.schemas.schemas import *
 
 env = get_environment_variables()
 
@@ -15,9 +18,16 @@ class VideosStorage:
         self.path_to_storage = path_to_storage
 
         self.db_repository_endpoint = db_repository_endpoint
+        self._headers = {'Content-Type': 'application/json'}
 
-    def get_path(self):
+    def get_path(self) -> str:
         return self.path_to_storage
+
+    def create_video_in_db(self, path_to_video) -> VideoResponse:
+        return requests.post(url=f'{self.db_repository_endpoint}/v1/videos/',
+                             data=json.dumps({'video_path': path_to_video}),
+                             headers=self._headers).json()
+
 
 
 try:
@@ -30,5 +40,5 @@ except Exception as e:
                                      f'Exception: {e}')
 
 
-def get_db_connection():
+def get_storage_connection():
     yield VIDEOS_STORAGE
