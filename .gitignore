@@ -1,5 +1,13 @@
 .idea/
 .venv/
+*.ipynb_checkpoints
 
 docker-compose-test.yml
 docker-compose.yml
+
+# envs
+frames_getter/configs/envs/
+
+# storages
+storage
+tmp_storages
