@@ -1,4 +1,4 @@
-# Car-Checkpoint-AI MVP v0.4.0
+# Car-Checkpoint-AI MVP v0.7.0
 
 **Car-Checkpoint-AI** - Это система, позволяющая автоматизировать контроль автомобилей при проезде КПП 
 
