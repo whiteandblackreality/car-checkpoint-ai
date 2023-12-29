@@ -1,0 +1,21 @@
+{
+  "selector_ffmpeg_is_used": false,
+  "selector_ffmpeg": {
+    "diff_threshold": 0.1,
+    "iframes_only":  false,
+    "fps": 1,
+    "mpdecimate": false,
+    "mpdecimate_args":  {
+      "hi": 0,
+      "lo": 0,
+      "frac": 1
+    },
+    "blackdetect": true,
+    "thumbnail": false
+  },
+  "selector_cv2_is_used": false,
+  "selector_cv2": {
+    "blur_method":  "tenengrad",
+    "blur_threshold":  400
+  }
+}

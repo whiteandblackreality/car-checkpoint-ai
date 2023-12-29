@@ -1,0 +1,2 @@
+class VideosStorageCreatingError(Exception):
+    pass

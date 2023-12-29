@@ -1,8 +1,6 @@
-# Car-Checkpoint-AI MVP v0.7.0
+# Car-Checkpoint-AI
 
 **Car-Checkpoint-AI** - Это система, позволяющая автоматизировать контроль автомобилей при проезде КПП 
-
-Первоначальная идея описана <a href="ex_readmes/README.md">здесь</a>
 
 ## Содержание
 - [Архитектура](#архитектура)
@@ -12,22 +10,29 @@
 
 Архитектура системы выглядит следующим образом: 
 
-<img src="assets/Car-Checkpoint-AI Architecture v0.4.0.png" alt="Архитектура системы">
+<img src="../assets/Car-Checkpoint-AI Architecture v0.1.2.png" alt="Архитектура системы">
 
 ## Структура проекта
 ```
 .
-├── app                 # Web-приложение системы (back)
-├── front               # Web-приложение системы (front)
+├── app                 # Web-приложение системы (back + front)
 ├── db_repository       # Сервис-репозиторий для общения с PostgreSQL
 ├── frames_getter       # Микросервис получения кадров из видео потока
-└── models              # Адаптеры к моделям
+└── models_adapter      # Микросервис для общения с Triton Server
 ```
 
 ## Структура БД
 
-<img src="assets/Car-Checkpoint-AI DB Structure v0.4.0.png" alt="Логическая схема БД">
+<img src="../assets/Car-Checkpoint-AI DB Structure v0.1.4.png" alt="Логическая схема БД">
+
+## Структура S3
+
+<img src="../assets/Car-Checkpoint-AI S3 Structure.png" alt="Структура S3">
 
 ## Общий пайплайн обработки
 
-<img src="assets/Car-Checkpoint-AI Pipeline v0.4.0.png" alt="Пайплайн работы">
+<img src="../assets/Car-Checkpoint-AI Pipeline.png" alt="Пайплайн работы">
+
+## Порты (dev)
+- 8679 (db-repository)
+- 8683 (WebRTC)

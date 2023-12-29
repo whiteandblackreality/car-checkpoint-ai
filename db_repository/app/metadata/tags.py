@@ -1,14 +1,10 @@
 Tags = [
     {
-        "name": "cars",
-        "description": "Contains CRUD operation on Car entity",
+        "name": "videos",
+        "description": "Contains CRUD operation on Videos entity",
     },
     {
-        "name": "entries",
-        "description": "Contains CRUD operation on Entry entity",
-    },
-    {
-        "name": "cameras",
-        "description": "Contains CRUD operation on Camera entity",
+        "name": "frames",
+        "description": "Contains CRUD operation on Frames entity",
     },
 ]
