@@ -11,3 +11,11 @@ frames_getter/configs/envs/
 # storages
 storage
 tmp_storages
+/milvus.ipynb
+/milvus-Copy1.ipynb
+/logconfig.log
+/models/weights/plates.pt
+/models/weights/vehicle.pt
+/models/weights/best.pt
+/models/vehicle_recognition/weights/tf_efficientnet_b5_drom_v1_4.pth
+/models/ocr_model/alpr_2.pth
